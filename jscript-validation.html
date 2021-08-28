@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script language="javascript">
+            
+            function validatePassword()
+            {
+                // Define variables and assign data from DOM
+                var password = document.getElementById("password").innerHTML;
+                var confirm = document.getElementById("confirm").innerHTML;
+
+                // Null check variables before performing operation
+                if (password != null && confirm != null)
+                {
+                    // Perform comparison of password inputs
+                    if (password == confirm)
+                    {
+                        alert("Passwords match.");
+                    }
+                    else
+                    {
+                        alert("Passwords do not match.");
+                    }
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <form id="formy" method="post" onsubmit="return false">
+            <label for="Name">Name: </label><br>
+            <input type="text" id="name"><br>
+            <label for="Email">Email: </label><br>
+            <input type="text" id="email"><br>
+            <label for="Password">Password: </label><br>
+            <input type="password" id="password"><br>
+            <label for="Confirm">Confirm Password: </label><br>
+            <input type="password" id="confirm"><br><br>
+            <button type="button" id="submit" value="Submit" onclick="validatePassword()" onsubmit="preventDefault()">Submit</button><br>
+        </form>
+    </body>
+</html>
